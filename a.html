@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+
+
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    #main {
+        /* display: grid; */
+
+    }
+
+    .container {
+        display: grid;
+        /* grid-template-rows: 2fr 5fr 2fr; */
+        grid-template-columns: 4fr 2fr;
+        padding: 10px;
+        /* margin: 10px; */
+        /* background-color: rgb(160, 0, 253); */
+        /* grid-gap: 2; */
+    }
+
+    .items {
+        padding: 10px;
+        grid-gap: 2;
+        margin: 10px;
+
+    }
+
+    .i1 {
+        background-color: red;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+
+    .i2 {
+        background: rgb(25, 5, 99);
+    }
+
+    .i3 {
+        background: rgb(8, 151, 73);
+        /* grid-column: 2; */
+    }
+
+    .i4 {
+        background: rgb(178, 207, 11);
+    }
+
+    .i5 {
+        background: rgb(151, 8, 139);
+    }
+
+    .i6 {
+        background: rgb(1, 253, 253);
+    }
+
+    table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    background: #ff523b;
+    color: white;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+    .market {
+        position: absolute;
+        top: 0%;
+    }
+
+    .market-map {
+        width: 100%;
+        height: 101%;
+        /* position: absolute; */
+        z-index: -1;
+    }
+
+     
+    @media only screen and (min-width: 400px) and (max-width:700px) {
+        .container {
+            background: royalblue;
+            grid-template-columns: 1fr;
+            /* grid-template-rows: 1fr; */
+            /* grid-column: 1; */
+        }
+
+        .i3 {
+            grid-column: 1;
+        }
+        .i2{
+            grid-column: 1;
+        }
+
+
+    }
+    @media only screen and (max-width:399px) {
+        .container {
+            /* background: royalblue; */
+            grid-template-columns: 1fr;
+            padding: 0%;
+          
+        }
+
+        .i3 {
+            grid-column: 1;
+        }
+        .i2{
+            grid-column: 1;
+        }
+
+
+    }
+</style>
+
+<body>
+
+    <div id="main">
+        <div class="container">
+            <div class="items i1">
+                <table style="overflow-x:auto;" >
+                    <tr class='d-tr'>
+                        <th>#</th>
+                        <th>Projects</th>
+                        <th>Manager</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                    </tr>
+                    <tr class='d-tr'>
+                        <td>1</td>
+                        <td>FaceBook</td>
+                        <td>Malorum</td>
+                        <td>In Progress</td>
+                        <td>50%</td>
+
+                    </tr>
+                    <tr class='d-tr'>
+                        <td>2</td>
+                        <td>TWITTER</td>
+                        <td>Evan</td>
+                        <td>Completed</td>
+                        <td>100%</td>
+
+                    </tr>
+                    <tr class='d-tr'>
+                        <td>3</td>
+                        <td>GOOGLE</td>
+                        <td>John</td>
+                        <td>In Progress</td>
+                        <td>75%</td>
+
+                    </tr>
+                    <tr class='d-tr'>
+                        <td>4</td>
+                        <td>LINKEDIN</td>
+                        <td>Danial</td>
+                        <td>In Progress</td>
+                        <td>65%</td>
+
+                    </tr>
+                    <tr class='d-tr'>
+                        <td>5</td>
+                        <td>TUMBLIR</td>
+                        <td>David</td>
+                        <td>In Progress</td>
+                        <td>95%</td>
+
+                    </tr>
+                    <tr class='d-tr'>
+                        <td>6</td>
+                        <td>TESLA</td>
+                        <td>Mickey</td>
+                        <td>In Progress</td>
+                        <td>95%</td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="items i2">
+                <h2 class="market">World Market</h2>
+                <img src="our_customer.jfif" alt="" class="market-map">
+            </div>
+            <div class="items i3"> <img src="statistics.png" alt="" class='market-map'>
+            </div>
+            <!-- <div class="items i4">4</div>
+            <div class="items i5">5</div>
+            <div class="items i6">6</div> -->
+        </div>
+    </div>
+</body>
+
+</html>
